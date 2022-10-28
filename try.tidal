@@ -1,0 +1,22 @@
+
+d1 $ n (slow 2 $ fmap (*7) $ run 8)
+  # s silence--"supernoise"
+  # decay "[1 0.2]/4"
+  # voice "[0.5 0]/3"
+
+d2 $ n (slow 6 $ fmap (*7) $ run 8)
+  # s silence --"bass0"
+  # decay "[1 0.2]/4"
+  # voice "[0.5 0]/8"
+
+--d3 $ n (slow 20 $ fmap (*7) $ run 8)
+  -- # s "bass1"
+  -- # decay "[1 0.2]/4"
+  -- # voice "[0.5 0]/8"
+d3 $ silence
+
+d4 $ note "c 7 2" # rand -- (slow 6 $ fmap (*4) $ run 2)
+  # sound "supernoise"
+  # speed "[1, 1.05]"
+  # gain "1280000"
+  # resonance "0.3"
